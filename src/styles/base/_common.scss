@@ -1,0 +1,7 @@
+@use "../utils/variables";
+
+body {
+  margin: 0;
+  font-size: 62.5%;
+  color: variables.$primary-font;
+}
