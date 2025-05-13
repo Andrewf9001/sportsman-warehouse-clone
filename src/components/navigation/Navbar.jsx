@@ -1,4 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCartShopping,
+  faMagnifyingGlass,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+
+import SmwLogo from "../../assets/smw-logo.svg";
 
 const Navbar = () => {
   return (
@@ -9,7 +17,7 @@ const Navbar = () => {
 
       <div className="navbar-wrapper">
         <div className="logo-address-wrapper">
-          <div>Logo</div>
+          <img src={SmwLogo} alt="Sportsman Warehouse Logo" />
 
           <div className="address-wrapper">
             <p>
@@ -18,6 +26,24 @@ const Navbar = () => {
             </p>
 
             <button>Change Store</button>
+          </div>
+        </div>
+
+        <div className="search-bar-wrapper">
+          <input type="search" />
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </div>
+
+        <div className="account-cart-wrapper">
+          <div className="account-wrapper">
+            <FontAwesomeIcon icon={faUser} />
+            <div>My Account</div>
+          </div>
+
+          <div className="my-cart-wrapper">
+            <div>0</div>
+            <FontAwesomeIcon icon={faCartShopping} />
+            <div>My Cart</div>
           </div>
         </div>
       </div>
