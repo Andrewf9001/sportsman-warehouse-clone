@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import SmwLogo from "../../assets/smw-logo.svg";
+import { navbarData } from "../../helpers/navbarData";
 
 const Navbar = () => {
   return (
@@ -49,18 +50,11 @@ const Navbar = () => {
       </div>
 
       <div className="nav-links-wrapper">
-        <NavLink to="#">Hunting</NavLink>
-        <NavLink to="#">Shooting</NavLink>
-        <NavLink to="#">Fishing</NavLink>
-        <NavLink to="#">Camping</NavLink>
-        <NavLink to="#">Boating</NavLink>
-        <NavLink to="#">Cooking</NavLink>
-        <NavLink to="#">Clothing</NavLink>
-        <NavLink to="#">Footwear</NavLink>
-        <NavLink to="#">Clearance</NavLink>
-        <NavLink to="#">Gift Cards</NavLink>
-        <NavLink to="#">Learn</NavLink>
-        <NavLink to="#">Personal Protection</NavLink>
+        {navbarData.map((navItem) => (
+          <NavLink key={navItem.link} to="#">
+            {navItem.link}
+          </NavLink>
+        ))}
       </div>
     </div>
   );
