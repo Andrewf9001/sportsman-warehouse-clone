@@ -1,144 +1,336 @@
 const shootingLinkData = {
   link: "Shooting",
   subCategory: {
-    title: "",
+    title: "Handguns",
     links: [
       {
         link: "#",
-        text: "",
+        text: "Pistols",
       },
       {
         link: "#",
-        text: "",
+        text: "Revolvers",
       },
       {
         link: "#",
-        text: "",
+        text: "Modern Sporting Pistols",
       },
       {
         link: "#",
-        text: "",
-      },
-      {
-        link: "#",
-        text: "",
+        text: "Break Action",
       },
     ],
   },
   subCategory: {
-    title: "",
+    title: "Rifles",
     links: [
       {
         link: "#",
-        text: "",
+        text: "Bolt Action",
       },
       {
         link: "#",
-        text: "",
+        text: "Semi Automatic",
       },
       {
         link: "#",
-        text: "",
+        text: "Modern Sporting Rifles",
       },
       {
         link: "#",
-        text: "",
+        text: "Lever Action Rifles",
       },
       {
         link: "#",
-        text: "",
-      },
-      {
-        link: "#",
-        text: "",
+        text: "Receivers and Lowers",
       },
     ],
   },
   subCategory: {
-    title: "",
+    title: "Shotguns",
     links: [
       {
         link: "#",
-        text: "",
+        text: "Pump Action",
       },
       {
         link: "#",
-        text: "",
+        text: "Semi Automatic",
       },
       {
         link: "#",
-        text: "",
+        text: "Over Under",
       },
       {
         link: "#",
-        text: "",
+        text: "Side by Side",
       },
       {
         link: "#",
-        text: "",
+        text: "Single Shot",
       },
     ],
   },
   subCategory: {
-    title: "",
+    title: "Ammunition",
     links: [
       {
         link: "#",
-        text: "",
+        text: "Handgun Ammo",
       },
       {
         link: "#",
-        text: "",
+        text: "Rifle Ammo",
       },
       {
         link: "#",
-        text: "",
+        text: "Rimfire Ammo",
       },
       {
         link: "#",
-        text: "",
+        text: "Shotshells",
       },
       {
         link: "#",
-        text: "",
-      },
-      {
-        link: "#",
-        text: "",
+        text: "Ammo Boxes",
       },
     ],
   },
   subCategory: {
-    title: "",
-    links: [],
+    title: "Scopes & Optics",
+    links: [
+      {
+        link: "#",
+        text: "Rifle Scopes",
+      },
+      {
+        link: "#",
+        text: "Binoculars",
+      },
+      {
+        link: "#",
+        text: "Spotting Scopes",
+      },
+      {
+        link: "#",
+        text: "Red Dots",
+      },
+      {
+        link: "#",
+        text: "Rangefinders",
+      },
+      {
+        link: "#",
+        text: "Thermal & Nightvision",
+      },
+      {
+        link: "#",
+        text: "View All",
+      },
+    ],
   },
   subCategory: {
-    title: "",
-    links: [],
+    title: "Reloading",
+    links: [
+      {
+        link: "#",
+        text: "Bullets",
+      },
+      {
+        link: "#",
+        text: "Reloading Dies",
+      },
+      {
+        link: "#",
+        text: "Reloading Presses & Kits",
+      },
+      {
+        link: "#",
+        text: "Primers",
+      },
+      {
+        link: "#",
+        text: "Powder",
+      },
+      {
+        link: "#",
+        text: "Reloading Tools",
+      },
+      {
+        link: "#",
+        text: "View All",
+      },
+    ],
   },
   subCategory: {
-    title: "",
-    links: [],
+    title: "Muzzleloader & Black Powder",
+    links: [
+      {
+        link: "#",
+        text: "Muzzleloaders",
+      },
+      {
+        link: "#",
+        text: "Black Powder Handguns",
+      },
+      {
+        link: "#",
+        text: "Powder & Primers",
+      },
+      {
+        link: "#",
+        text: "Bullets & Sabots",
+      },
+      {
+        link: "#",
+        text: "Black Powder Accessories",
+      },
+      {
+        link: "#",
+        text: "Black Powder Cleaning",
+      },
+      {
+        link: "#",
+        text: "Muzzleloader Parts",
+      },
+    ],
   },
   subCategory: {
-    title: "",
-    links: [],
+    title: "Gun Storage",
+    links: [
+      {
+        link: "#",
+        text: "Gun Safes",
+      },
+      {
+        link: "#",
+        text: "Pistol Safes",
+      },
+      {
+        link: "#",
+        text: "Vault Doors",
+      },
+      {
+        link: "#",
+        text: "Gun Cases & Locks",
+      },
+      {
+        link: "#",
+        text: "Gun Safe Accessories",
+      },
+    ],
   },
   subCategory: {
-    title: "",
-    links: [],
+    title: "Gun Parts & Accessories",
+    links: [
+      {
+        link: "#",
+        text: "Magazines & Clips",
+      },
+      {
+        link: "#",
+        text: "Rifle & Handgun Parts",
+      },
+      {
+        link: "#",
+        text: "Gun Tools & Maintenance",
+      },
+      {
+        link: "#",
+        text: "Gun Sights & Lasers",
+      },
+      {
+        link: "#",
+        text: "Weapon Lights",
+      },
+      {
+        link: "#",
+        text: "Holsters",
+      },
+      {
+        link: "#",
+        text: "Belts",
+      },
+    ],
   },
   subCategory: {
-    title: "",
-    links: [],
+    title: "Shooting Equipment",
+    links: [
+      {
+        link: "#",
+        text: "Eye Protection",
+      },
+      {
+        link: "#",
+        text: "Hearing Protection",
+      },
+      {
+        link: "#",
+        text: "Gun Cleaning",
+      },
+      {
+        link: "#",
+        text: "Benches, Rests, & Bags",
+      },
+      {
+        link: "#",
+        text: "Bipods, Tripods, & Shooting Sticks",
+      },
+      {
+        link: "#",
+        text: "Targets",
+      },
+      {
+        link: "#",
+        text: "View All",
+      },
+    ],
   },
   subCategory: {
-    title: "",
-    links: [],
+    title: "Specialty",
+    links: [
+      {
+        link: "#",
+        text: "Tactical & Self Defense",
+      },
+      {
+        link: "#",
+        text: "Airguns & Blow Guns",
+      },
+      {
+        link: "#",
+        text: "Clay Shooting Sports",
+      },
+      {
+        link: "#",
+        text: "Ring & Base Finder",
+      },
+      {
+        link: "#",
+        text: "Holster Finder",
+      },
+      {
+        link: "#",
+        text: "Magazine Finder",
+      },
+      {
+        link: "#",
+        text: "Guns for Sale by Model",
+      },
+    ],
   },
   subCategory: {
-    title: "",
-    links: [],
+    title: "Suppressors",
+    links: [
+      {
+        link: "#",
+        text: "Suppressors",
+      },
+      {
+        link: "#",
+        text: "Suppressor Accessories",
+      },
+    ],
   },
 };
 
