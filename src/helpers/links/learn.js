@@ -2,7 +2,12 @@ const learnLinkData = {
   link: "Learn",
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",

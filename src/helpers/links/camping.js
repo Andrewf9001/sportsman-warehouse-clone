@@ -2,7 +2,12 @@ const campingLinkData = {
   link: "Camping",
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",

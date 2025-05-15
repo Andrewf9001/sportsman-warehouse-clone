@@ -2,7 +2,12 @@ const clearanceLinkData = {
   link: "Clearance",
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",

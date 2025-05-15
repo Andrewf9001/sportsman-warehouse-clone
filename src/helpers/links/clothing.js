@@ -2,7 +2,12 @@ const clothingLinkData = {
   link: "Clothing",
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",

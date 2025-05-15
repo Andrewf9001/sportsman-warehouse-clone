@@ -2,7 +2,12 @@ const footwearLinkData = {
   link: "Footwear",
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",
