@@ -2,19 +2,111 @@ const shootingLinkData = {
   link: "Shooting",
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",
-    links: [],
+    links: [
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+      {
+        link: "#",
+        text: "",
+      },
+    ],
   },
   subCategory: {
     title: "",
