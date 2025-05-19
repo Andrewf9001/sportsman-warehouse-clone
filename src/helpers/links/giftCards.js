@@ -1,9 +1,11 @@
 const giftCardLinkData = {
   link: "Gift Cards",
-  subCategory: {
-    title: "",
-    links: [],
-  },
+  subCategories: [
+    {
+      title: "",
+      links: [],
+    },
+  ],
 };
 
 export default giftCardLinkData;
