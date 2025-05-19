@@ -13,7 +13,7 @@ import MegaMenu from "./MegaMenu";
 
 const Navbar = () => {
   return (
-    <div className="navbar-container">
+    <nav className="navbar-container">
       <div className="shipping-statement-wrapper">
         <Link to="#">Get Free Shipping on Orders over $49</Link>
       </div>
@@ -51,16 +51,17 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="nav-links-wrapper" style={{ display: "flex" }}>
-        {navbarData.map((navItem) => {
-          return (
-            <NavItem key={navItem.link} label={navItem.link}>
-              <MegaMenu subCategories={navItem.subCategories} />
-            </NavItem>
-          );
-        })}
+      <div
+        className="nav-links-wrapper"
+        style={{ display: "flex", justifyContent: "space-around" }}
+      >
+        {navbarData.map((navItem) => (
+          <NavItem key={navItem.link} label={navItem.link}>
+            <MegaMenu subCategories={navItem.subCategories} />
+          </NavItem>
+        ))}
       </div>
-    </div>
+    </nav>
   );
 };
 
