@@ -9,6 +9,7 @@ import {
 import SmwLogo from "../../assets/smw-logo.svg";
 import { navbarData } from "../../helpers/navbarData";
 import NavItem from "./NavItem";
+import MegaMenu from "./MegaMenu";
 
 const Navbar = () => {
   return (
@@ -50,12 +51,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="nav-links-wrapper">
-        {navbarData.map((navItem) => (
-          <NavItem key={navItem.link} label={navItem.link}>
-            {navItem.link}
-          </NavItem>
-        ))}
+      <div className="nav-links-wrapper" style={{ display: "flex" }}>
+        {navbarData.map((navItem) => {
+          return (
+            <NavItem key={navItem.link} label={navItem.link}>
+              <MegaMenu subCategories={navItem.subCategories} />
+            </NavItem>
+          );
+        })}
       </div>
     </div>
   );
