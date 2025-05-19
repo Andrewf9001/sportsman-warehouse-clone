@@ -8,6 +8,7 @@ import {
 
 import SmwLogo from "../../assets/smw-logo.svg";
 import { navbarData } from "../../helpers/navbarData";
+import NavItem from "./NavItem";
 
 const Navbar = () => {
   return (
@@ -51,9 +52,9 @@ const Navbar = () => {
 
       <div className="nav-links-wrapper">
         {navbarData.map((navItem) => (
-          <NavLink key={navItem.link} to="#">
+          <NavItem key={navItem.link} label={navItem.link}>
             {navItem.link}
-          </NavLink>
+          </NavItem>
         ))}
       </div>
     </div>
