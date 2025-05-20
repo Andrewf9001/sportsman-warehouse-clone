@@ -1,0 +1,12 @@
+.search-bar-container {
+  display: flex;
+  position: relative;
+
+  input {
+    display: none;
+  }
+
+  &.expanded input {
+    display: block;
+  }
+}
