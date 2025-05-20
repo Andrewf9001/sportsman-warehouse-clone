@@ -1,2 +1,6 @@
 @use "./utils/variables.scss";
+
 @use "./base/common.scss";
+
+@use "./layout/navbar.scss";
+@use "./layout/navbar_queries";
