@@ -1,2 +1,46 @@
 .navbar-container {
+  display: flex;
+  flex-direction: column;
+
+  .shipping-statement-wrapper {
+    order: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #1c4951;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .navbar-wrapper {
+    .left-column-wrapper {
+      img {
+        width: 35%;
+      }
+
+      .address-wrapper {
+        display: none;
+      }
+    }
+
+    .right-column-wrapper {
+      .account-wrapper {
+        div {
+          display: none;
+        }
+      }
+
+      .my-cart-wrapper {
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .nav-links-wrapper {
+    display: none;
+  }
 }
