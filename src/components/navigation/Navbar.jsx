@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           <div className="my-cart-wrapper">
-            <div>0</div>
+            <div className="count">0</div>
             <FontAwesomeIcon icon={faCartShopping} />
             <NavLink>My Cart</NavLink>
           </div>

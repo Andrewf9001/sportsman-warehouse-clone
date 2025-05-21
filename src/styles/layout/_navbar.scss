@@ -15,9 +15,16 @@
   }
 
   .navbar-wrapper {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 70px;
+    padding: 0 10px;
+
     .left-column-wrapper {
+      align-self: center;
+
       img {
-        width: 35%;
+        width: 100%;
       }
 
       .address-wrapper {
@@ -26,15 +33,31 @@
     }
 
     .right-column-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10%;
+
+      svg {
+        height: 30px;
+        color: #1a4952;
+      }
+
       .account-wrapper {
-        div {
-          display: none;
-        }
+        display: none;
       }
 
       .my-cart-wrapper {
+        position: relative;
+
         a {
           display: none;
+        }
+
+        .count {
+          position: absolute;
+          bottom: 60%;
+          right: -40%;
         }
       }
     }
