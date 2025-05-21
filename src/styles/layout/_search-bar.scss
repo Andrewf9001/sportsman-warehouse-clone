@@ -8,5 +8,11 @@
 
   &.expanded input {
     display: block;
+    position: absolute;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
   }
 }
