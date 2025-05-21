@@ -1,14 +1,8 @@
 import { useState } from "react";
-import Navbar from "./navigation/Navbar";
-import ShippingStatement from "./navigation/ShippingStatement";
-import SearchBar from "./ui/SearchBar";
 
-{
-  /* 
-  Todo:
-    - Navbar component to be replaced with search bar component
-*/
-}
+import ShippingStatement from "./navigation/ShippingStatement";
+import Navbar from "./navigation/Navbar";
+import SearchBar from "./ui/SearchBar";
 
 const App = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

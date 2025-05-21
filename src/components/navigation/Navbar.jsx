@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -6,14 +6,12 @@ import {
   faLocationDot,
   faMagnifyingGlass,
   faUser,
-  faX,
 } from "@fortawesome/free-solid-svg-icons";
 
 import SmwLogo from "../../assets/smw-logo.svg";
-import { navbarData } from "../../helpers/navbarData";
-import NavItem from "./NavItem";
 import MegaMenu from "./MegaMenu";
-import SearchBar from "../ui/SearchBar";
+import NavItem from "./NavItem";
+import { navbarData } from "../../helpers/navbarData";
 
 const Navbar = ({ handleToggleSearch }) => {
   return (
@@ -44,19 +42,18 @@ const Navbar = ({ handleToggleSearch }) => {
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
           </div>
-          {/* <SearchBar /> */}
 
           <FontAwesomeIcon icon={faLocationDot} />
 
           <div className="account-wrapper">
             <FontAwesomeIcon icon={faUser} />
-            <div>My Account</div>
+            <Link>My Account</Link>
           </div>
 
           <div className="my-cart-wrapper">
             <div className="count">0</div>
             <FontAwesomeIcon icon={faCartShopping} />
-            <NavLink>My Cart</NavLink>
+            <Link>My Cart</Link>
           </div>
 
           <FontAwesomeIcon icon={faBars} />
