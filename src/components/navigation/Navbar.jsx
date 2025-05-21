@@ -14,13 +14,8 @@ import MegaMenu from "./MegaMenu";
 import SearchBar from "../ui/SearchBar";
 
 const Navbar = () => {
-  // const [isMenu]
   return (
     <nav className="navbar-container">
-      <div className="shipping-statement-wrapper">
-        <Link to="#">Get Free Shipping on Orders over $49</Link>
-      </div>
-
       <div className="navbar-wrapper">
         <div className="left-column-wrapper">
           <img src={SmwLogo} alt="Sportsman Warehouse Logo" />

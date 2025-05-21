@@ -2,18 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  .shipping-statement-wrapper {
-    order: 1;
-    padding: 10px;
-    text-align: center;
-    background-color: #1c4951;
-
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-
   .navbar-wrapper {
     display: grid;
     grid-template-columns: 30% 70%;

@@ -1,4 +1,5 @@
 import Navbar from "./navigation/Navbar";
+import ShippingStatement from "./navigation/ShippingStatement";
 
 {
   /* 
@@ -10,7 +11,10 @@ import Navbar from "./navigation/Navbar";
 const App = () => {
   return (
     <div className="app-container">
-      <Navbar />
+      <div className="app-navbar-wrapper">
+        <Navbar />
+        <ShippingStatement />
+      </div>
     </div>
   );
 };
