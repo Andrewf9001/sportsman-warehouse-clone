@@ -2,6 +2,18 @@ import { faMagnifyingGlass, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
+{
+  /* 
+  Todo:
+    - Mobile (only show icon)
+      - When icon is clicked, replace navbar with Searchbar component
+      - Contains Search Icon (right) input (center) left (cancel button)
+    - Tablet + Desktop
+      - Search bar is always visible
+      - Contains input (right) search button (left)  
+*/
+}
+
 const SearchBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
