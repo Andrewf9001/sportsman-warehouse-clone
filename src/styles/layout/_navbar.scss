@@ -31,6 +31,25 @@
         color: #1a4952;
       }
 
+      .search-bar-wrapper {
+        display: flex;
+        position: relative;
+
+        input {
+          display: none;
+        }
+
+        &.expanded input {
+          display: block;
+          position: absolute;
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+        }
+      }
+
       .account-wrapper {
         display: none;
       }

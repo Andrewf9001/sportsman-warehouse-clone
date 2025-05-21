@@ -1,18 +1,3 @@
 .search-bar-container {
-  display: flex;
-  position: relative;
-
-  input {
-    display: none;
-  }
-
-  &.expanded input {
-    display: block;
-    position: absolute;
-  }
-
-  button {
-    background-color: transparent;
-    border: none;
-  }
+  height: 70px;
 }

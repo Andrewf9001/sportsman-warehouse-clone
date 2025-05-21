@@ -4,7 +4,9 @@ import {
   faBars,
   faCartShopping,
   faLocationDot,
+  faMagnifyingGlass,
   faUser,
+  faX,
 } from "@fortawesome/free-solid-svg-icons";
 
 import SmwLogo from "../../assets/smw-logo.svg";
@@ -13,7 +15,7 @@ import NavItem from "./NavItem";
 import MegaMenu from "./MegaMenu";
 import SearchBar from "../ui/SearchBar";
 
-const Navbar = () => {
+const Navbar = ({ handleToggleSearch }) => {
   return (
     <nav className="navbar-container">
       <div className="navbar-wrapper">
@@ -31,7 +33,18 @@ const Navbar = () => {
         </div>
 
         <div className="right-column-wrapper">
-          <SearchBar />
+          <div className="search-bar-wrapper">
+            <input type="search" placeholder="Search..." />
+
+            <button
+              className="search-icon"
+              label="Toggle search"
+              onClick={() => handleToggleSearch(true)}
+            >
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
+          </div>
+          {/* <SearchBar /> */}
 
           <FontAwesomeIcon icon={faLocationDot} />
 

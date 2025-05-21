@@ -1,6 +1,5 @@
-import { faMagnifyingGlass, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 {
   /* 
@@ -14,19 +13,15 @@ import { useState } from "react";
 */
 }
 
-const SearchBar = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
+const SearchBar = ({ handleToggleSearch }) => {
   return (
-    <div className={`search-bar-container ${isExpanded ? "expanded" : ""}`}>
-      <input type="search" placeholder="Search..." />
+    <div className="search-bar-container">
+      <FontAwesomeIcon icon={faMagnifyingGlass} />
 
-      <button
-        className="search-icon"
-        label="Toggle search"
-        onClick={() => setIsExpanded((prev) => !prev)}
-      >
-        <FontAwesomeIcon icon={isExpanded ? faX : faMagnifyingGlass} />
+      <input type="search" />
+
+      <button className="cancel" onClick={() => handleToggleSearch(false)}>
+        Cancel
       </button>
     </div>
   );
