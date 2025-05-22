@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import ShippingStatement from "./navigation/ShippingStatement";
+import ShippingStatement from "./navigation/shared/ShippingStatement";
 import Navbar from "./navigation/Navbar";
 import SearchBar from "./ui/SearchBar";
 

@@ -9,8 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import SmwLogo from "../../assets/smw-logo.svg";
-import MegaMenu from "./MegaMenu";
-import NavItem from "./NavItem";
+import MegaMenu from "./shared/MegaMenu";
+import NavItem from "./desktop/NavItem";
 import { navbarData } from "../../helpers/navbarData";
 
 const Navbar = ({ handleToggleSearch }) => {
