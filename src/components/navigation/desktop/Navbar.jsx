@@ -13,7 +13,7 @@ import MegaMenu from "../shared/MegaMenu";
 import NavItem from "./NavItem";
 import { navbarData } from "../../../helpers/navbarData";
 
-const Navbar = ({ handleToggleSearch }) => {
+const Navbar = () => {
   return (
     <nav className="navbar-container">
       <div className="navbar-wrapper">
@@ -34,11 +34,7 @@ const Navbar = ({ handleToggleSearch }) => {
           <div className="search-bar-wrapper">
             <input type="search" placeholder="Search..." />
 
-            <button
-              className="search-icon"
-              label="Toggle search"
-              onClick={() => handleToggleSearch(true)}
-            >
+            <button className="search-icon" label="Search">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
           </div>

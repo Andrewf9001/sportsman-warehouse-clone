@@ -14,10 +14,6 @@
       img {
         width: 100%;
       }
-
-      .address-wrapper {
-        display: none;
-      }
     }
 
     .right-column-wrapper {
@@ -32,35 +28,15 @@
       }
 
       .search-bar-wrapper {
-        display: flex;
-        position: relative;
-
-        input {
-          display: none;
-        }
-
-        &.expanded input {
-          display: block;
-          position: absolute;
-        }
-
         button {
           background-color: transparent;
           border: none;
         }
       }
 
-      .account-wrapper {
-        display: none;
-      }
-
       .my-cart-wrapper {
         position: relative;
         z-index: -1;
-
-        a {
-          display: none;
-        }
 
         .count {
           position: absolute;
@@ -69,9 +45,5 @@
         }
       }
     }
-  }
-
-  .nav-links-wrapper {
-    display: none;
   }
 }

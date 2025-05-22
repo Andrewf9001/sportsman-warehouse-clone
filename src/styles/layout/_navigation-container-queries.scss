@@ -1,11 +1,15 @@
 @media (min-width: 768px) {
   .navigation-container {
     .navbar-container {
-      display: block;
+      display: flex;
     }
 
     .mobile-navbar-container {
       display: none;
+    }
+
+    .shipping-statement-container {
+      order: -1;
     }
   }
 }
