@@ -2,11 +2,13 @@
 
 @use "./base/common.scss";
 
-@use "./layout/navbar.scss";
-@use "./layout/navbar_queries";
+@use "./layout/navigation/navigation-container";
+@use "./layout/navigation/navigation-container-queries";
+@use "./layout/navigation/desktop/navbar";
+@use "./layout/navigation/desktop/navbar_queries";
+@use "./layout/navigation/mobile/mobile-nav-menu";
+
+@use "./layout/my-cart";
+@use "./layout/shipping_statement";
 @use "./layout/search-bar";
 @use "./layout/search-bar-queries";
-@use "./layout/shipping_statement";
-@use "./layout/navigation-container";
-@use "./layout/navigation-container-queries";
-@use "./layout/my-cart";

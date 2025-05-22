@@ -1,7 +1,22 @@
+import { useState } from "react";
+
+import MobileNavMenu from "./MobileNavMenu";
+import SearchBar from "../../ui/SearchBar";
+
 const MobileNavbar = () => {
+  const [toggleSearch, setToggleSearch] = useState(false);
+
+  const handleToggleSearch = (action) => {
+    setToggleSearch(action);
+  };
+
   return (
     <div className="mobile-navbar-container">
-      <h1> Mobile Navbar</h1>
+      {!toggleSearch ? (
+        <MobileNavMenu handleToggleSearch={handleToggleSearch} />
+      ) : (
+        <SearchBar handleToggleSearch={handleToggleSearch} />
+      )}
     </div>
   );
 };

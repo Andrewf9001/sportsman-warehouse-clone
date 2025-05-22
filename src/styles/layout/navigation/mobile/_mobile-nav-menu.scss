@@ -1,0 +1,32 @@
+.mobile-nav-menu-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 70px;
+  padding: 0 10px;
+
+  .left-column-wrapper {
+    align-self: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .right-column-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10%;
+
+    svg {
+      height: 30px;
+      color: #1a4952;
+    }
+
+    .my-cart-container {
+      a {
+        display: none;
+      }
+    }
+  }
+}
