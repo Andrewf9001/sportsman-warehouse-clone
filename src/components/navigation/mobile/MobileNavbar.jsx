@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import MobileNavMenu from "./MobileNavMenu";
-import SearchBar from "../../ui/SearchBar";
+import SearchBar from "./SearchBar";
 
 const MobileNavbar = () => {
   const [toggleSearch, setToggleSearch] = useState(false);

@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCartShopping,
-  faMagnifyingGlass,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import SmwLogo from "../../../assets/smw-logo.svg";
 import MegaMenu from "../shared/MegaMenu";
 import MyCart from "../../ui/MyCart";
 import NavItem from "./NavItem";
 import { navbarData } from "../../../helpers/navbarData";
+// import SearchBar from "../../ui/SearchBar";
 
 const Navbar = () => {
   return (
@@ -37,6 +34,8 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
           </div>
+
+          {/* <SearchBar /> */}
 
           <div className="account-wrapper">
             <FontAwesomeIcon icon={faUser} />

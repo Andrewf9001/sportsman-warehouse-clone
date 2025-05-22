@@ -1,3 +1,35 @@
 .search-bar-container {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
   height: 70px;
+  padding: 0 4%;
+
+  .search-input-wrapper {
+    display: flex;
+    height: 40px;
+
+    svg {
+      height: 24px;
+      color: #fff;
+      background-color: #1c4951;
+      border: solid 2px #1c4951;
+      padding: 6px;
+    }
+
+    input {
+      height: 100%;
+      width: 80%;
+      font-size: 1.6em;
+      outline: none;
+    }
+  }
+
+  .cancel {
+    justify-self: flex-end;
+    font-weight: 600;
+    color: #19212b;
+    background-color: transparent;
+    border: none;
+  }
 }
