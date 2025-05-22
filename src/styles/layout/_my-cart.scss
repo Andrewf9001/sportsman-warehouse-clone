@@ -1,0 +1,10 @@
+.my-cart-container {
+  position: relative;
+  z-index: -1;
+
+  .count {
+    position: absolute;
+    bottom: 60%;
+    right: -40%;
+  }
+}

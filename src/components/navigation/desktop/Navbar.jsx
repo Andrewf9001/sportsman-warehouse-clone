@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBars,
   faCartShopping,
-  faLocationDot,
   faMagnifyingGlass,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
 import SmwLogo from "../../../assets/smw-logo.svg";
 import MegaMenu from "../shared/MegaMenu";
+import MyCart from "../../ui/MyCart";
 import NavItem from "./NavItem";
 import { navbarData } from "../../../helpers/navbarData";
 
@@ -39,20 +38,12 @@ const Navbar = () => {
             </button>
           </div>
 
-          <FontAwesomeIcon icon={faLocationDot} />
-
           <div className="account-wrapper">
             <FontAwesomeIcon icon={faUser} />
             <Link>My Account</Link>
           </div>
 
-          <div className="my-cart-wrapper">
-            <div className="count">0</div>
-            <FontAwesomeIcon icon={faCartShopping} />
-            <Link>My Cart</Link>
-          </div>
-
-          <FontAwesomeIcon icon={faBars} />
+          <MyCart />
         </div>
       </div>
 
