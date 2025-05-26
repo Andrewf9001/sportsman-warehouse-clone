@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -7,8 +8,11 @@ import {
 
 import SmwLogo from "../../../assets/smw-logo.svg";
 import MyCart from "../../ui/MyCart";
+import MobileMenu from "./MobileMenu";
 
 const MobileNavMenu = ({ handleToggleSearch }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="mobile-nav-menu-container">
       <div className="left-column-wrapper">
@@ -25,11 +29,16 @@ const MobileNavMenu = ({ handleToggleSearch }) => {
 
         <MyCart />
 
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon
+          icon={faBars}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        />
         {/* Location Icon -> Opens from left for all locations */}
         {/* My Cart -> Import component */}
         {/* Bars -> Opens nav menu from right */}
       </div>
+
+      {isMenuOpen && <MobileMenu />}
     </div>
   );
 };
