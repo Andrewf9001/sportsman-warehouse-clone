@@ -13,6 +13,10 @@ import MobileMenu from "./MobileMenu";
 const MobileNavMenu = ({ handleToggleSearch }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleMenuOpen = (action) => {
+    setIsMenuOpen(action);
+  };
+
   return (
     <div className="mobile-nav-menu-container">
       <div className="left-column-wrapper">
@@ -38,7 +42,7 @@ const MobileNavMenu = ({ handleToggleSearch }) => {
         {/* Bars -> Opens nav menu from right */}
       </div>
 
-      {isMenuOpen && <MobileMenu />}
+      {isMenuOpen && <MobileMenu handleMenuOpen={handleMenuOpen} />}
     </div>
   );
 };
