@@ -1,14 +1,30 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faX } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+  faX,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { navbarData } from "../../../helpers/navbarData";
 
 const MobileMenu = ({ handleMenuOpen }) => {
   const [activeMenu, setActiveMenu] = useState("main");
 
-  console.log("activeMenu", activeMenu);
+  const menuData = () => {
+    if (activeMenu !== "menu") {
+      const currentData = navbarData.find(
+        (category) => category.link === activeMenu
+      );
+
+      return currentData?.subCategories;
+    } else {
+      return navbarData;
+    }
+  };
+
+  console.log("subMenuData", menuData());
 
   return (
     <div
@@ -23,7 +39,7 @@ const MobileMenu = ({ handleMenuOpen }) => {
       </div>
 
       <div className="menu-items-wrapper">
-        {navbarData.map((item) => {
+        {menuData.map((item) => {
           return (
             <div className="nav-link-wrapper">
               <NavLink
@@ -38,6 +54,18 @@ const MobileMenu = ({ handleMenuOpen }) => {
           );
         })}
       </div>
+
+      {activeMenu !== "main" && menuData.length > 0 && (
+        <div className="subcategory-items-wrapper">
+          <button onClick={() => setActiveMenu("main")}>
+            <FontAwesomeIcon icon={faChevronLeft} /> Back
+          </button>
+
+          {menuData.map((item) => {
+            <div>{item.title}</div>;
+          })}
+        </div>
+      )}
     </div>
   );
 };
