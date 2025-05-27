@@ -1,6 +1,54 @@
 .mobile-menu-container {
   width: 100vw;
   height: 100vh;
-  background-color: green;
+  background-color: #efefef;
   position: absolute;
+
+  a {
+    font-size: 14px;
+    color: #1c4951;
+    text-decoration: none;
+  }
+
+  .menu-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0% 5%;
+
+    svg {
+      height: 20px;
+    }
+
+    a,
+    svg {
+      color: #1c4951;
+    }
+  }
+
+  .menu-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: scroll;
+    height: 80vh;
+
+    .nav-link-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 55px;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #c1c1c1;
+      padding: 0% 5%;
+
+      a {
+        font-weight: 600;
+      }
+
+      svg {
+        height: 15px;
+      }
+    }
+  }
 }
