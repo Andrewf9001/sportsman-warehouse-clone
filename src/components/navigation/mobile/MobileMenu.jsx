@@ -38,27 +38,31 @@ const MobileMenu = ({ handleMenuOpen }) => {
         <FontAwesomeIcon icon={faX} onClick={() => handleMenuOpen(false)} />
       </div>
 
-      <div className="menu-items-wrapper">
-        {menuData().map((item) => {
-          return (
-            <div className="nav-link-wrapper" key={item.link}>
-              <NavLink onClick={() => setActiveMenu(`${item.link}`)}>
-                {item.link}
-              </NavLink>
+      {activeMenu === "main" && (
+        <div className="menu-items-wrapper">
+          {menuData().map((item) => {
+            return (
+              <div className="nav-link-wrapper" key={item.link}>
+                <NavLink onClick={() => setActiveMenu(`${item.link}`)}>
+                  {item.link}
+                </NavLink>
 
-              <FontAwesomeIcon icon={faChevronRight} />
-            </div>
-          );
-        })}
-      </div>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </div>
+            );
+          })}
+        </div>
+      )}
 
-      {activeMenu !== "main" && menuData().length > 0 && (
+      {activeMenu !== "main" && (
         <div className="subcategory-items-wrapper">
-          <button onClick={() => setActiveMenu("main")}>
+          <button className="back-button" onClick={() => setActiveMenu("main")}>
             <FontAwesomeIcon icon={faChevronLeft} /> Back
           </button>
 
-          <NavLink>Shop all {activeMenu}</NavLink>
+          <div className="shop-all-wrapper">
+            <NavLink>Shop all {activeMenu}</NavLink>
+          </div>
 
           {menuData().map((item) => {
             return (
