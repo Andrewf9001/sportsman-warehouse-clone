@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,8 +12,8 @@ import { navbarData } from "../../../helpers/navbarData";
 const MobileMenu = ({ handleMenuOpen }) => {
   const [activeMenu, setActiveMenu] = useState("main");
 
-  const menuData = () => {
-    if (activeMenu !== "menu") {
+  const menuData = useCallback(() => {
+    if (activeMenu !== "main") {
       const currentData = navbarData.find(
         (category) => category.link === activeMenu
       );
@@ -22,9 +22,9 @@ const MobileMenu = ({ handleMenuOpen }) => {
     } else {
       return navbarData;
     }
-  };
+  });
 
-  console.log("subMenuData", menuData());
+  console.log("menuData", menuData());
 
   return (
     <div
@@ -39,13 +39,10 @@ const MobileMenu = ({ handleMenuOpen }) => {
       </div>
 
       <div className="menu-items-wrapper">
-        {menuData.map((item) => {
+        {menuData().map((item) => {
           return (
-            <div className="nav-link-wrapper">
-              <NavLink
-                key={item.link}
-                onClick={() => setActiveMenu(`${item.link}`)}
-              >
+            <div className="nav-link-wrapper" key={item.link}>
+              <NavLink onClick={() => setActiveMenu(`${item.link}`)}>
                 {item.link}
               </NavLink>
 
@@ -55,14 +52,20 @@ const MobileMenu = ({ handleMenuOpen }) => {
         })}
       </div>
 
-      {activeMenu !== "main" && menuData.length > 0 && (
+      {activeMenu !== "main" && menuData().length > 0 && (
         <div className="subcategory-items-wrapper">
           <button onClick={() => setActiveMenu("main")}>
             <FontAwesomeIcon icon={faChevronLeft} /> Back
           </button>
 
-          {menuData.map((item) => {
-            <div>{item.title}</div>;
+          <NavLink>Shop all {activeMenu}</NavLink>
+
+          {menuData().map((item) => {
+            return (
+              <div className="sub-category-item-wrapper" key={item.title}>
+                <NavLink>{item.title}</NavLink>
+              </div>
+            );
           })}
         </div>
       )}
