@@ -5,10 +5,12 @@ import {
   faChevronDown,
   faChevronLeft,
   faChevronRight,
+  faChevronUp,
   faX,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { navbarData } from "../../../helpers/navbarData";
+import SubMenuDropdown from "./SubMenuDropdown";
 
 const MobileMenu = ({ handleMenuOpen }) => {
   const [activeMenu, setActiveMenu] = useState("main");
@@ -69,20 +71,22 @@ const MobileMenu = ({ handleMenuOpen }) => {
 
   const renderSubMenu = () => {
     return menuData().map((subMenuItem) => {
+      const isOpen = subMenu.name === subMenuItem.title && subMenu.isOpen;
+
       return (
         <div className="sub-category-item-wrapper" key={subMenuItem.title}>
           <NavLink to="#">{subMenuItem.title}</NavLink>
 
           <FontAwesomeIcon
-            icon={faChevronDown}
+            icon={isOpen ? faChevronUp : faChevronDown}
             onClick={() => handleSubMenu(subMenuItem.title)}
           />
+
+          {isOpen && <SubMenuDropdown links={subMenuItem.links} />}
         </div>
       );
     });
   };
-
-  console.log("subMenu", subMenu);
 
   return (
     <div
