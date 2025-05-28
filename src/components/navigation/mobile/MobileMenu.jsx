@@ -74,7 +74,7 @@ const MobileMenu = ({ handleMenuOpen }) => {
       const isOpen = subMenu.name === subMenuItem.title && subMenu.isOpen;
 
       return (
-        <div className="sub-category-item-wrapper" key={subMenuItem.title}>
+        <div className="sub-menu-item" key={subMenuItem.title}>
           <NavLink to="#">{subMenuItem.title}</NavLink>
 
           <FontAwesomeIcon
@@ -110,11 +110,11 @@ const MobileMenu = ({ handleMenuOpen }) => {
             <FontAwesomeIcon icon={faChevronLeft} /> Back
           </button>
 
-          <div className="shop-all-wrapper">
-            <NavLink to="#">Shop all {activeMenu}</NavLink>
-          </div>
+          <NavLink className="shop-all-link" to="#">
+            Shop all {activeMenu}
+          </NavLink>
 
-          {renderSubMenu()}
+          <div className="sub-menu-wrapper">{renderSubMenu()}</div>
         </div>
       )}
     </div>

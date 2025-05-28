@@ -10,23 +10,20 @@
     text-decoration: none;
   }
 
-  .menu-items-wrapper,
-  .subcategory-items-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 56px;
-    overflow: scroll;
-    height: 80vh;
+  .menu-link,
+  .sub-menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #c1c1c1;
+    padding: 0% 5%;
 
-    .nav-link-wrapper,
-    .sub-category-item-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 55px;
-      background-color: #f9f9f9;
-      border-bottom: 1px solid #c1c1c1;
-      padding: 0% 5%;
+    svg {
+      height: 15px;
     }
   }
 
@@ -48,25 +45,16 @@
   }
 
   .menu-items-wrapper {
-    .menu-link {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 55px;
-      font-size: 15px;
-      font-weight: 700;
-      background-color: #f9f9f9;
-      border-bottom: 1px solid #c1c1c1;
-      padding: 0% 5%;
-
-      svg {
-        height: 15px;
-      }
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 56px;
+    overflow: scroll;
+    height: 80vh;
   }
 
   .subcategory-items-wrapper {
     .back-button {
+      width: 100%;
       height: 55px;
       font-size: 16px;
       font-weight: 600;
@@ -82,24 +70,23 @@
       }
     }
 
-    .shop-all-wrapper {
+    .shop-all-link {
       display: flex;
       align-items: center;
       height: 55px;
       background-color: #1c4951;
       padding-left: 5%;
-
-      a {
-        font-size: 15px;
-        font-weight: 600;
-        color: #fff;
-      }
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
     }
 
-    .sub-category-item-wrapper {
-      a {
-        font-size: 15px;
-        font-weight: 600;
+    .sub-menu-wrapper {
+      .sub-menu-item {
+        a {
+          font-size: 15px;
+          font-weight: 600;
+        }
       }
     }
   }
