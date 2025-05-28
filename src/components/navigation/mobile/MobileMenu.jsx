@@ -24,7 +24,36 @@ const MobileMenu = ({ handleMenuOpen }) => {
     }
   });
 
-  console.log("menuData", menuData());
+  const checkSubLinks = useCallback((item) => {
+    const subCategoryLinks = item?.subCategories[0].links;
+
+    if (subCategoryLinks.length === 0) return false;
+    else return true;
+  });
+
+  const renderMainMenu = () => {
+    return menuData().map((menuItem) => {
+      if (!checkSubLinks(menuItem)) {
+        return (
+          <NavLink key={menuItem.link} className="menu-link" to="#">
+            {menuItem.link}
+          </NavLink>
+        );
+      } else {
+        return (
+          <div
+            key={menuItem.link}
+            className="menu-link"
+            onClick={() => setActiveMenu(`${menuItem.link}`)}
+          >
+            {menuItem.link}
+
+            <FontAwesomeIcon icon={faChevronRight} />
+          </div>
+        );
+      }
+    });
+  };
 
   return (
     <div
@@ -39,19 +68,7 @@ const MobileMenu = ({ handleMenuOpen }) => {
       </div>
 
       {activeMenu === "main" && (
-        <div className="menu-items-wrapper">
-          {menuData().map((item) => {
-            return (
-              <div className="nav-link-wrapper" key={item.link}>
-                <NavLink onClick={() => setActiveMenu(`${item.link}`)}>
-                  {item.link}
-                </NavLink>
-
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            );
-          })}
-        </div>
+        <div className="menu-items-wrapper">{renderMainMenu()}</div>
       )}
 
       {activeMenu !== "main" && (

@@ -48,18 +48,16 @@
   }
 
   .menu-items-wrapper {
-    .nav-link-wrapper {
+    .menu-link {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 55px;
+      font-size: 15px;
+      font-weight: 700;
       background-color: #f9f9f9;
       border-bottom: 1px solid #c1c1c1;
       padding: 0% 5%;
-
-      a {
-        font-weight: 600;
-      }
 
       svg {
         height: 15px;
