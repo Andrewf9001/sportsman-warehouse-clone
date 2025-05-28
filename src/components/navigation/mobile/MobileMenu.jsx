@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faChevronDown,
   faChevronLeft,
   faChevronRight,
   faX,
@@ -11,6 +12,10 @@ import { navbarData } from "../../../helpers/navbarData";
 
 const MobileMenu = ({ handleMenuOpen }) => {
   const [activeMenu, setActiveMenu] = useState("main");
+  const [subMenu, setSubMenu] = useState({
+    name: "",
+    isOpen: false,
+  });
 
   const menuData = useCallback(() => {
     if (activeMenu !== "main") {
@@ -30,6 +35,13 @@ const MobileMenu = ({ handleMenuOpen }) => {
     if (subCategoryLinks.length === 0) return false;
     else return true;
   });
+
+  const handleSubMenu = (name) => {
+    setSubMenu((prev) => ({
+      name,
+      isOpen: prev.name !== name ? true : !prev.isOpen,
+    }));
+  };
 
   const renderMainMenu = () => {
     return menuData().map((menuItem) => {
@@ -55,6 +67,23 @@ const MobileMenu = ({ handleMenuOpen }) => {
     });
   };
 
+  const renderSubMenu = () => {
+    return menuData().map((subMenuItem) => {
+      return (
+        <div className="sub-category-item-wrapper" key={subMenuItem.title}>
+          <NavLink to="#">{subMenuItem.title}</NavLink>
+
+          <FontAwesomeIcon
+            icon={faChevronDown}
+            onClick={() => handleSubMenu(subMenuItem.title)}
+          />
+        </div>
+      );
+    });
+  };
+
+  console.log("subMenu", subMenu);
+
   return (
     <div
       className={`mobile-menu-container ${
@@ -78,16 +107,10 @@ const MobileMenu = ({ handleMenuOpen }) => {
           </button>
 
           <div className="shop-all-wrapper">
-            <NavLink>Shop all {activeMenu}</NavLink>
+            <NavLink to="#">Shop all {activeMenu}</NavLink>
           </div>
 
-          {menuData().map((item) => {
-            return (
-              <div className="sub-category-item-wrapper" key={item.title}>
-                <NavLink>{item.title}</NavLink>
-              </div>
-            );
-          })}
+          {renderSubMenu()}
         </div>
       )}
     </div>
