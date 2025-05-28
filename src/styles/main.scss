@@ -1,13 +1,19 @@
+// Utils
 @use "./utils/variables.scss";
 
+// Base
 @use "./base/common.scss";
 
+// Layout
 @use "./layout/navigation/navigation-container";
 @use "./layout/navigation/navigation-container-queries";
+
 @use "./layout/navigation/desktop/navbar";
 @use "./layout/navigation/desktop/navbar_queries";
+
 @use "./layout/navigation/mobile/mobile-nav-menu";
 @use "./layout/navigation/mobile/mobile-menu";
+@use "./layout/navigation/mobile/mobile-menu-queries";
 
 @use "./layout/my-cart";
 @use "./layout/shipping_statement";
