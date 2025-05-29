@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -20,7 +21,9 @@ const MobileNavMenu = ({ handleToggleSearch }) => {
   return (
     <div className="mobile-nav-menu-container">
       <div className="left-column-wrapper">
-        <img src={SmwLogo} alt="Sportsman Warehouse Logo" />
+        <Link to="/">
+          <img src={SmwLogo} alt="Sportsman Warehouse Logo" />
+        </Link>
       </div>
 
       <div className="right-column-wrapper">
@@ -38,8 +41,6 @@ const MobileNavMenu = ({ handleToggleSearch }) => {
           onClick={() => setIsMenuOpen((prev) => !prev)}
         />
         {/* Location Icon -> Opens from left for all locations */}
-        {/* My Cart -> Import component */}
-        {/* Bars -> Opens nav menu from right */}
       </div>
 
       {isMenuOpen && <MobileMenu handleMenuOpen={handleMenuOpen} />}
