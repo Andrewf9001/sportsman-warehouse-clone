@@ -82,10 +82,15 @@
     }
 
     .sub-menu-wrapper {
-      .sub-menu-item {
-        a {
-          font-size: 15px;
-          font-weight: 600;
+      .sub-menu-item-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .sub-menu-item {
+          a {
+            font-size: 15px;
+            font-weight: 600;
+          }
         }
       }
     }

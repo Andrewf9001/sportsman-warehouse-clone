@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 const SubMenuDropdown = ({ links }) => {
   const renderLinks = () => {
     return links.map((link) => {
       return (
-        <div className="link-wrapper" key={link.text}>
-          <div>{link.text}</div>
-        </div>
+        <Link key={link.text} className="link-wrapper" to="#">
+          {link.text}
+        </Link>
       );
     });
   };

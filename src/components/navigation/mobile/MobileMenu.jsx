@@ -74,13 +74,15 @@ const MobileMenu = ({ handleMenuOpen }) => {
       const isOpen = subMenu.name === subMenuItem.title && subMenu.isOpen;
 
       return (
-        <div className="sub-menu-item" key={subMenuItem.title}>
-          <NavLink to="#">{subMenuItem.title}</NavLink>
+        <div className="sub-menu-item-wrapper" key={subMenuItem.title}>
+          <div className="sub-menu-item">
+            <NavLink to="#">{subMenuItem.title}</NavLink>
 
-          <FontAwesomeIcon
-            icon={isOpen ? faChevronUp : faChevronDown}
-            onClick={() => handleSubMenu(subMenuItem.title)}
-          />
+            <FontAwesomeIcon
+              icon={isOpen ? faChevronUp : faChevronDown}
+              onClick={() => handleSubMenu(subMenuItem.title)}
+            />
+          </div>
 
           {isOpen && <SubMenuDropdown links={subMenuItem.links} />}
         </div>
