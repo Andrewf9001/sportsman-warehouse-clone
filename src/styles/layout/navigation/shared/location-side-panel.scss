@@ -48,4 +48,16 @@
       }
     }
   }
+
+  .current-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20px;
+
+    svg {
+      padding-left: 2%;
+    }
+  }
 }
