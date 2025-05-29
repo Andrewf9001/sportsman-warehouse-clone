@@ -17,6 +17,8 @@
 @use "./layout/navigation/mobile/mobile-menu-queries";
 @use "./layout/navigation/mobile/sub-menu-dropdown";
 
+@use "./layout/navigation/shared/location-side-panel.scss";
+
 @use "./layout/my-cart";
 @use "./layout/shipping_statement";
 @use "./layout/search-bar";

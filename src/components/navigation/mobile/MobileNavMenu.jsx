@@ -10,12 +10,18 @@ import {
 import SmwLogo from "../../../assets/smw-logo.svg";
 import MyCart from "../../ui/MyCart";
 import MobileMenu from "./MobileMenu";
+import LocationSidePanel from "../shared/LocationSidePanel";
 
 const MobileNavMenu = ({ handleToggleSearch }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLocationOpen, setIsLocationOpen] = useState(false);
 
   const handleMenuOpen = (action) => {
     setIsMenuOpen(action);
+  };
+
+  const handleLocationPanel = (action) => {
+    setIsLocationOpen(action);
   };
 
   return (
@@ -32,18 +38,26 @@ const MobileNavMenu = ({ handleToggleSearch }) => {
           onClick={() => handleToggleSearch(true)}
         />
 
-        <FontAwesomeIcon icon={faLocationDot} />
+        {/* TODO: Add Animation slide from left */}
+        <FontAwesomeIcon
+          icon={faLocationDot}
+          onClick={() => setIsLocationOpen((prev) => !prev)}
+        />
 
         <MyCart />
 
+        {/* TODO: Add Animation slide from right */}
         <FontAwesomeIcon
           icon={faBars}
           onClick={() => setIsMenuOpen((prev) => !prev)}
         />
-        {/* Location Icon -> Opens from left for all locations */}
       </div>
 
       {isMenuOpen && <MobileMenu handleMenuOpen={handleMenuOpen} />}
+
+      {isLocationOpen && (
+        <LocationSidePanel handleLocationPanel={handleLocationPanel} />
+      )}
     </div>
   );
 };
