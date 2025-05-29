@@ -91,7 +91,9 @@ const LocationSidePanel = ({ handleLocationPanel }) => {
       <div className="search-wrapper">
         <input type="search" placeholder="City, State, Or Zip Code" />
 
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
+        <div className="magnifying-glass-wrapper">
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </div>
       </div>
 
       <div className="current-location">
